@@ -19,9 +19,7 @@ function App() {
     for (let i = 1; i <= length; i++) {
       let char = Math.floor(Math.random() * str.length + 1);
       pass += str.charAt(char);
-
     }
-
     setPassword(pass)
 
   }, [length, numberAllowed, charAllowed, setPassword])
@@ -35,11 +33,9 @@ const handleCopy = () => {
   navigator.clipboard.writeText(password);
   alert("Copied");
 }
-
 const handleRefresh = () => {
   passwordGenerator();
 }
-
   return (
     <>
       <h1>Password Generator</h1>
@@ -51,7 +47,6 @@ const handleRefresh = () => {
             placeholder='password'
             readOnly
           />
-         
           <button className='display' onClick={handleCopy}>Copy</button>
           <button className='display reload' onClick={handleRefresh}>↻</button>
         </div>
@@ -90,8 +85,6 @@ const handleRefresh = () => {
           </div>
         </div>
       </div>
-
-
     </>
   )
 }
